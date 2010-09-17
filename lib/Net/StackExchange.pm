@@ -103,6 +103,10 @@ __END__
     print "Title: ", $answer->title(), "\n";
     print "Body: ",  $answer->body (), "\n";
 
+=head1 !!! WARNING !!!
+
+Incomplete implementation. Interface may change.
+
 =attr C<new>
 
 Accepts a hash reference with C<network> and C<version> as keys. Returns a
