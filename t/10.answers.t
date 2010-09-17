@@ -35,6 +35,8 @@ is( $answer->answer_comments_url(),
 is( $answer->question_id(), 1036347, 'matched question_id' );
 
 subtest 'Net::StackExchange::Owner' => sub {
+    plan tests => 5;
+
     my $owner = $answer->owner();
     isa_ok( $owner, 'Net::StackExchange::Owner' );
 
