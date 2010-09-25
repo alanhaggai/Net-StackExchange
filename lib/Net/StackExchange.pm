@@ -19,32 +19,32 @@ has 'network' => (
     is  => 'ro',
     isa => enum( [
         qw{
-          stackoverflow.com
-          serverfault.com
-          meta.stackoverflow.com
-          superuser.com
-          stackapps.com
-          webapps.stackexchange.com
-          gaming.stackexchange.com
-          webmasters.stackexchange.com
-          cooking.stackexchange.com
-          gamedev.stackexchange.com
-          gadgets.stackexchange.com
-          photo.stackexchange.com
-          stats.stackexchange.com
-          math.stackexchange.com
-          diy.stackexchange.com
-          gis.stackexchange.com
-          tex.stackexchange.com
-          ubuntu.stackexchange.com
-          money.stackexchange.com
-          english.stackexchange.com
-          ui.stackexchange.com
-          unix.stackexchange.com
-          wordpress.stackexchange.com
-          cstheory.stackexchange.com
-          apple.stackexchange.com
-          rpg.stackexchange.com
+            stackoverflow.com
+            serverfault.com
+            meta.stackoverflow.com
+            superuser.com
+            stackapps.com
+            webapps.stackexchange.com
+            gaming.stackexchange.com
+            webmasters.stackexchange.com
+            cooking.stackexchange.com
+            gamedev.stackexchange.com
+            gadgets.stackexchange.com
+            photo.stackexchange.com
+            stats.stackexchange.com
+            math.stackexchange.com
+            diy.stackexchange.com
+            gis.stackexchange.com
+            tex.stackexchange.com
+            ubuntu.stackexchange.com
+            money.stackexchange.com
+            english.stackexchange.com
+            ui.stackexchange.com
+            unix.stackexchange.com
+            wordpress.stackexchange.com
+            cstheory.stackexchange.com
+            apple.stackexchange.com
+            rpg.stackexchange.com
           }
     ] ),
     required => 1,

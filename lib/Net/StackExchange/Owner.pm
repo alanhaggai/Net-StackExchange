@@ -5,7 +5,12 @@ package Net::StackExchange::Owner;
 use Moose;
 use Moose::Util::TypeConstraints;
 
-has 'user_id' => (
+has [
+    qw{
+        user_id
+        reputation
+      }
+    ] => (
     is       => 'rw',
     isa      => 'Int',
     required => 1,
@@ -17,19 +22,12 @@ has 'user_type' => (
     required => 1,
 );
 
-has 'display_name' => (
-    is       => 'rw',
-    isa      => 'Str',
-    required => 1,
-);
-
-has 'reputation' => (
-    is       => 'rw',
-    isa      => 'Int',
-    required => 1,
-);
-
-has 'email_hash' => (
+has [
+    qw{
+        display_name
+        email_hash
+      }
+    ] => (
     is       => 'rw',
     isa      => 'Str',
     required => 1,

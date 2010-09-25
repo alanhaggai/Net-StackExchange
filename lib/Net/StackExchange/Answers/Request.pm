@@ -15,13 +15,26 @@ has 'id' => (
     required => 1,
 );
 
-has [ qw{ body comments } ] => (
+has [
+    qw{
+        body
+        comments
+      }
+    ] => (
     is     => 'rw',
     isa    => 'Boolean',
     coerce => 1,
 );
 
-has [ qw{ fromdate max min page todate } ] => (
+has [
+    qw{
+        fromdate
+        max
+        min
+        page
+        todate
+      }
+    ] => (
     is  => 'rw',
     isa => 'Int',
 );
@@ -74,7 +87,18 @@ sub execute {
 }
 
 sub _get_request_attributes {
-    return qw{ body comments fromdate max min order page pagesize sort todate };
+    return qw{
+               body
+               comments
+               fromdate
+               max
+               min
+               order
+               page
+               pagesize
+               sort
+               todate
+             };
 }
 
 __PACKAGE__->meta()->make_immutable();

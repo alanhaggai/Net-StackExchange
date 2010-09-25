@@ -4,7 +4,13 @@ package Net::StackExchange::Role::Response;
 
 use Moose::Role;
 
-has [ qw{ total page pagesize } ] => (
+has [
+    qw{
+        total
+        page
+        pagesize
+      }
+    ] => (
     is       => 'ro',
     isa      => 'Int',
     required => 1,

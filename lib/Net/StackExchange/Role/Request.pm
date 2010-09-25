@@ -18,7 +18,12 @@ has 'type' => (
     },
 );
 
-has [ qw{ key jsonp } ] => (
+has [
+    qw{
+        key
+        jsonp
+      }
+    ] => (
     is  => 'rw',
     isa => 'Str',
 );
