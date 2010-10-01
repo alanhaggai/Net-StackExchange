@@ -55,24 +55,35 @@ sub _populate_answers_object {
             'email_hash'   => $owner_ref->{'email_hash'  },
         );
 
+        my $locked_date        = $answer_ref->{'locked_date'       };
+        my $last_edit_date     = $answer_ref->{'last_edit_date'    };
+        my $body               = $answer_ref->{'body'              };
+        my $last_activity_date = $answer_ref->{'last_activity_date'};
+
+        $locked_date        = defined $locked_date    ? $locked_date    : 0;
+        $last_edit_date     = defined $last_edit_date ? $last_edit_date : 0;
+        $body               = defined $body           ? $body           : 0;
+        $last_activity_date = defined $last_activity_date ?
+                                      $last_activity_date : 0;
+
         my $answers = Net::StackExchange::Answers->new( {
             '_NSE'                => $self->_NSE(),
             'answer_id'           => $answer_ref->{'answer_id'          },
             'accepted'            => $answer_ref->{'accepted'           },
             'answer_comments_url' => $answer_ref->{'answer_comments_url'},
             'question_id'         => $answer_ref->{'question_id'        },
-            'locked_date'         => $answer_ref->{'locked_date'        } // 0,
+            'locked_date'         => $locked_date,
             'owner'               => $user,
             'creation_date'       => $answer_ref->{'creation_date'      },
-            'last_edit_date'      => $answer_ref->{'last_edit_date'     } // 0,
-            'last_activity_date'  => $answer_ref->{'last_activity_date' } // 0,
+            'last_edit_date'      => $last_edit_date,
+            'last_activity_date'  => $last_activity_date,
             'up_vote_count'       => $answer_ref->{'up_vote_count'      },
             'down_vote_count'     => $answer_ref->{'down_vote_count'    },
             'view_count'          => $answer_ref->{'view_count'         },
             'score'               => $answer_ref->{'score'              },
             'community_owned'     => $answer_ref->{'community_owned'    },
             'title'               => $answer_ref->{'title'              },
-            'body'                => $answer_ref->{'body'               } // '',
+            'body'                => $body,
         } );
 
         push @answers, $answers;

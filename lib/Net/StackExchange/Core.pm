@@ -17,7 +17,9 @@ sub _get_query_string {
 
     while ( my ( $key, $value ) = each %{$parametres} ) {
         $key   = uri_escape($key  );
-        $value = uri_escape($value) // next;
+        $value = uri_escape($value);
+
+        next unless defined $value;
 
         push @query_string, "$key=$value";
     }
