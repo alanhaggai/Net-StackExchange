@@ -1,3 +1,9 @@
+Fri Oct  1 06:20:38 UTC 2010
+    - made compatible with < perl 5.10
+    - removed unnecessary quoting
+    - compose same type of attributes into a single 'has'
+    - Test::MockObject somehow crept in
+
 Wed Sep 22 04:58:54 UTC 2010    -   v0.102650
     - require Test::More v0.94
 
