@@ -71,7 +71,7 @@ around 'route' => sub {
     }
 
     $route = "\u$route";
-    return "Net::StackExchange::Route"->new( {
+    return Net::StackExchange::Route->new( {
         '_NSE'   => $self,
         '_route' => $route,
     } );
